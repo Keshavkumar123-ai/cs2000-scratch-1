@@ -29,7 +29,7 @@ where:
   distance(get-row(items, 5)) is-roughly 5
 end
   
-itemsx = build-column(items, "distance", distance)
+items-with-dist = build-column(items, "distance", distance)
 
 #transform column
 fun sub-10(n :: Number) -> Number:
@@ -41,4 +41,7 @@ where:
   sub-10(30) is 20
 end
 
-itemsy = transform-column(items, "x-coordinate", sub-10)
+itemsx = transform-column(items-with-dist, "x-coordinate", sub-10)
+newt = transform-column(itemsx, "y-coordinate", sub-10)
+
+
