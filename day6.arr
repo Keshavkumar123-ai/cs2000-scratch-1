@@ -14,3 +14,7 @@ recipes = load-table:
   prep-time :: Number
   source: csv-table-url("https://raw.githubusercontent.com/neu-pdi/cs2000-public-resources/refs/heads/main/static/support/5-recipes.csv", default-options)
 end
+
+recipes
+
+
