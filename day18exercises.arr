@@ -40,4 +40,16 @@ end
 recipes-with-servings = transform-column(recipes-raw, "servings", string-to-number-default(0))
 recipes = transform-column(recipes-with-servings, "prep-time", string-to-number-default(0))
 
-recipes
+data Recipe:
+  | recipe(title :: String, servings :: Number, prep-time :: Number)
+end
+
+fun row-to-recipe(r :: Row) -> Recipe:
+  doc:"returns a recipe from the row"
+  recipe(get-column(r, "title"),
+  (get-column(r, "servings")), 
+  (get-column(r, "prep-time"))
+    )
+where:
+  row-to-recipe(get-row(recipes, 2)) is recipe("Avocado Toast", 2, 10)
+end
