@@ -31,17 +31,5 @@ where:
 end
 
 
-Limit = 4
-fun string-less-than(str-lst :: List<String>) -> List<String>:
-  doc:"returns the strings that are less than a limit"
-  
-  
-  
-where:
-  string-less-than([list: "hi", "hello", "hey"]) is ([list: "hi", "hey"])
-  string-less-than([list: "hello", "hey"]) is [list: "hey"]
-  string-less-than([list: "hey"]) is [list: "hey"]
-  string-less-than([list: ]) is [list: ]
-end
   
    
