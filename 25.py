@@ -41,3 +41,4 @@ list(filter(lambda elem: elem % 2 == 0, elements))
 alphabets = ["a", "b", "c"]
 list(map(lambda alpha: alpha.upper(), alphabets))
 
+ 
